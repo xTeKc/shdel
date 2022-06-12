@@ -8,6 +8,8 @@ use iced::{
     Row, Rule, Sandbox, Text,
 };
 
+
+
 #[derive(Default)]
 pub struct TheApplication {
     theme: style::Theme,

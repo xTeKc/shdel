@@ -1,10 +1,16 @@
 ![workflow](https://github.com/xTeKc/ShellDel/actions/workflows/ci.yml/badge.svg)
 
 # ShellDel
-![shelldel](https://user-images.githubusercontent.com/81730792/173214219-2993d0d5-e791-4b00-a17e-4a80a7fc5cc7.png)
-
 Delete shell history of your terminal.
 
-_Supports Bash and Zsh._
+__Usage__ : 
+- `clone repo`
+- `cargo build`
+- `cargo run` to delete bash and zsh terminal history data
 
-# Work in progress
+__Capabilities__ : 
+- deletes data from bash and zsh terminal history files
+
+__Future Additions__ :
+- add CLI frontend
+- add CLI option to delete one or both history files

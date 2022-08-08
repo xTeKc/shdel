@@ -6,10 +6,10 @@ Delete shell history of your terminal.
 __Usage__ : 
 - `clone repo`
 - `cargo build`
-- `cargo run` to delete bash and zsh terminal history data
+- `cargo run` to delete *bash* and *zsh* terminal history data
 
 __Capabilities__ : 
-- deletes data from bash and zsh terminal history files
+- deletes data from *bash* and *zsh* terminal history files
 
 __Future Additions__ :
 - add CLI frontend

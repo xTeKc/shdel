@@ -61,8 +61,8 @@ mod tests {
     fn write_to_history_file() {
         let user: &'static str = env!("USER");
         let mut _path = format!("/home/{user}/.bash_history");
-        _path = "".to_owned();
-        assert_eq!(_path, "".to_owned())
+        _path = None;
+        assert_eq!(_path, None)
     }
 
     #[test]

@@ -61,8 +61,8 @@ mod tests {
     fn write_to_history_file() {
         let user: &'static str = env!("USER");
         let mut _path = format!("/home/{user}/.zhistory");
-        _path = None;
-        assert_eq!(_path, None)
+        _path = String::from("");
+        assert_eq!(_path, String::from(""))
     }
 
     #[test]

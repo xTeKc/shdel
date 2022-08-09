@@ -4,20 +4,20 @@ use ansi_term::Colour::{Red, Green,};
 
 
 #[allow(unused)]
-fn the_user() -> &'static str {
+pub fn the_user() -> &'static str {
     let user: &'static str = env!("USER");
     user
 }
 
 #[allow(unused)]
-fn read_file() {
+pub fn read_file() {
     let whoami = the_user();
     let full_path = format!("/home/{whoami}/.bash_history");
     let read_file = fs::read_to_string(full_path);
     println!("{:?}", read_file);
 }
 
-fn write_to_file() -> std::io::Result<()> {
+pub fn write_to_file() -> std::io::Result<()> {
     let user: &'static str = env!("USER");
     let mut _path = format!("/home/{user}/.bash_history");
     let write = fs::write(format!("{_path}"), "")?;
@@ -29,7 +29,7 @@ fn write_to_file() -> std::io::Result<()> {
     Ok(())
 }
 
-fn exit_command() {
+pub fn exit_command() {
     // TODO
 }
 

@@ -1,7 +1,7 @@
 [workspace]
 members = [
-    "core_app",
-    "ui",
+    "cli",
+    "xcore",
 ]
 
 resolver = "2"

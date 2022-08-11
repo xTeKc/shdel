@@ -6,9 +6,10 @@ use ansi_term::Colour::{Red, Green,};
 
 
 #[allow(unused)]
-pub fn the_user() -> &'static str {
-    let user: &'static str = env!("USER");
-    user
+pub fn the_user() -> String {
+    let user: &str = env!("USER");
+    let owned_user = user.to_owned();
+    owned_user
 }
 
 #[allow(unused)]
@@ -20,7 +21,7 @@ pub fn read_file() {
 }
 
 pub fn write_to_file() -> std::io::Result<()> {
-    let user: &'static str = env!("USER");
+    let user: &str = env!("USER");
     let mut _path = format!("/home/{user}/.zhistory");
     let write = fs::write(format!("{_path}"), "")?;
     match write {
@@ -49,19 +50,19 @@ mod tests {
 
     #[test]
     fn check_the_user() {
-        let user: &'static str = env!("USER");
+        let user: &str = env!("USER");
         assert_eq!(format!("{user}"), "dev")
     }
 
     #[test]
     fn read_history_file() {
-        let user: &'static str = env!("USER");
+        let user: &str = env!("USER");
         assert_eq!(format!("/home/{user}/.zhistory"), "/home/dev/.zhistory")
     }
 
     #[test]
     fn write_to_history_file() {
-        let user: &'static str = env!("USER");
+        let user: &str = env!("USER");
         let mut _path = format!("/home/{user}/.zhistory");
         _path = String::from("");
         assert_eq!(_path, String::from(""))

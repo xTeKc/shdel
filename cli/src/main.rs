@@ -1,50 +1,40 @@
 #[allow(unused)]
 use xcore::{bash, zsh};
-use clap::*;
+use clap::{Parser, Subcommand};
 
-fn get_args_builder() {
-    let _matches = App::new("\nshelldel")
-        .version("[ 0.1.0 ]")
-        .about("Delete data from shell history file(s)")
-        //.author("xTeKc")
-        .arg(
-            Arg::new("bash")
-            .short('b')
-            .long("bash")
-            .help("Delete data from bash history file")
-        )
-        .arg(
-            Arg::new("zsh")
-            .short('z')
-            .long("zsh")
-            .help("Delete data from zsh history file")
-        )
-        .get_matches();
-
-        let _bash_h = bash::the_user();
-        let _zsh_h = zsh::the_user();
-
-    if let Some(_bash_h) = _matches.value_of("bash") {
-        println!("{}", _bash_h);
-    }
-
-    if let Some(_zsh_h) = _matches.value_of("zsh") {
-        println!("{}", _zsh_h);
-    }
+#[derive(Debug, Parser)]
+#[clap(about, version, author,)]
+struct TheShell {
+    /// Delete data from bash
+    #[clap(short = 'b', long)]
+    bash: String,
+    /// Delete data from zsh
+    #[clap(short = 'z', long)]
+    zsh: String,
 }
 
-    // #[derive(Parser)]
-    // #[clap(author, version, about, long_about = None)]
-    // pub struct TheCli {
-    //     /// Delete data from bash history file
-    //     #[clap(value_parser)]
-    //     bash: String,
-    //     /// Delete data from zsh history file
-    //     #[clap(value_parser)]
-    //     zsh: String
-    // }
+#[derive(Parser)]
+#[clap(about, version, author)]
+struct Output {
+    #[clap(subcommand)]
+    command: Commands,
+}
 
+#[derive(Subcommand)]
+enum Commands {
+    Bash (TheShell),
+    Zsh (TheShell),
+}
 
 fn main() {
-    get_args_builder();
+    let the_shell = TheShell {
+        bash: bash::the_user(),
+        zsh: zsh::the_user(),
+    };
+
+    //let _parse_shell = TheShell::parse();
+
+    println!("{:#?}", the_shell);
+
+    
 }

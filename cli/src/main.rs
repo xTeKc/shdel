@@ -27,14 +27,5 @@ enum Commands {
 }
 
 fn main() {
-    let the_shell = TheShell {
-        bash: bash::the_user(),
-        zsh: zsh::the_user(),
-    };
-
-    //let _parse_shell = TheShell::parse();
-
-    println!("{:#?}", the_shell);
-
     
 }

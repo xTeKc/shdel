@@ -4,7 +4,7 @@ use std::path::Path;
 use std::process::Command;
 // use std::time;
 // use std::time::Duration;
-//use ansi_term::Colour::{Green,};
+use ansi_term::Colour::{Green, Red, Yellow};
 
 pub fn read_path() {
     let user: &str = env!("USER");
@@ -26,7 +26,7 @@ pub fn the_user() -> String {
     owned_user
 }
 
-pub fn read_file() /*-> std::io::Result<String>*/ {
+pub fn read_file() {
     let whoami = the_user();
     let full_path = format!("/home/{whoami}/.zhistory");
 
@@ -34,24 +34,22 @@ pub fn read_file() /*-> std::io::Result<String>*/ {
 
     match check_file_read {
         true => read_path(),
-        false => eprintln!(".zhistory File Not Found"),
+        false => eprintln!("{}", Red.paint("\n.zhistory File Not Found")),
     }
-
-    //Ok(String::from("Read .zhistory File"))
 }
 
-pub fn write_to_file() /*-> std::io::Result<String>*/ {
+pub fn write_to_file() {
     let user: &str = env!("USER");
     let mut _path = format!("/home/{user}/.zhistory");
 
     let check_file_write = Path::new(&_path).exists();
 
     match check_file_write {
-        true => write_path(),
-        false => eprintln!(".zhistory File Not Found"),
+        true => println!("{} {:?} {}", 
+        Green.paint("\nDeleted Data In .zhistory File."), 
+        write_path(), Yellow.paint("\n\nRESET TERMINAL"),),
+        false => eprintln!("{}", Red.paint("\n.zhistory File Not Found")),
     }
-
-    //Ok(String::from("Wrote to .zhistory File"))
 }
 
 pub fn clear_term() -> Command {
@@ -65,18 +63,7 @@ pub fn reset_term() -> Command {
 }
 
 pub fn zsh_main() {
-    // let read_file = read_file();
-    // println!("{:?}", read_file);
-    
-    read_file();
     write_to_file();
-    read_file();
-
-    // match read_file {
-    //     () => println!("{}", Green.paint("\nReset Terminal")),
-    //     #[allow(unreachable_patterns)]
-    //     _ => (),
-    // }
 }
 
 #[cfg(test)]

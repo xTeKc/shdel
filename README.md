@@ -1,8 +1,11 @@
 ![workflow](https://github.com/xTeKc/ShellDel/actions/workflows/ci.yml/badge.svg)
 
 # **ShellDel**
-Delete data from shell history file(s). <br>
-It currently only deletes data from **bash** and **zsh** terminal history files.
+Delete data from shell history file(s). <br> 
+
+## **Supported Shells**
+- [x] *Bash*
+- [x] *Zsh*
 
 ## **Features**
 - checks if the corresponding file exists

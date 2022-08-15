@@ -4,7 +4,7 @@ use std::path::Path;
 use std::process::Command;
 // use std::time;
 // use std::time::Duration;
-use ansi_term::Colour::{Green,};
+//use ansi_term::Colour::{Green,};
 
 pub fn read_path() {
     let user: &str = env!("USER");
@@ -65,9 +65,12 @@ pub fn reset_term() -> Command {
 }
 
 pub fn zsh_main() {
-    let read_file = read_file();
-    println!("{:?}", read_file);
+    // let read_file = read_file();
+    // println!("{:?}", read_file);
+    
+    read_file();
     write_to_file();
+    read_file();
 
     // match read_file {
     //     () => println!("{}", Green.paint("\nReset Terminal")),

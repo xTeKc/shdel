@@ -1,31 +1,34 @@
-#[allow(unused)]
 use xcore::{bash, zsh};
-use clap::{Parser, Subcommand};
-
-#[derive(Debug, Parser)]
-#[clap(about, version, author,)]
-struct TheShell {
-    /// Delete data from bash
-    #[clap(short = 'b', long)]
-    bash: String,
-    /// Delete data from zsh
-    #[clap(short = 'z', long)]
-    zsh: String,
-}
-
-#[derive(Parser)]
-#[clap(about, version, author)]
-struct Output {
-    #[clap(subcommand)]
-    command: Commands,
-}
-
-#[derive(Subcommand)]
-enum Commands {
-    Bash (TheShell),
-    Zsh (TheShell),
-}
+use clap::{App, Arg};
 
 fn main() {
-    
+    let matches = App::new("shelldel")
+        .about("Delete data from shell history file(s)")
+        .version("0.1.0")
+        
+        .arg(
+            Arg::new("bash")
+            .short('b')
+            .long("bash")
+            .help("Delete bash data")
+        )
+
+        .arg(
+            Arg::new("zsh")
+            .short('z')
+            .long("zsh")
+            .help("Delete zsh data")
+        )
+
+        .get_matches();
+
+    match matches.contains_id("bash") {
+        true => bash::bash_main(),
+        false => ()
+    };
+
+    match matches.contains_id("zsh") {
+        true => zsh::zsh_main(),
+        false => ()
+    };
 }

@@ -2,14 +2,14 @@
 
 # **ShellDel**
 Delete data from shell history file(s). <br>
-It currently only deletes data from **bash** and **zsh** terminal history files
+It currently only deletes data from **bash** and **zsh** terminal history files.
 
 ## **Usage** : 
 - `clone repo`
 - `cargo build`
-- `cargo run -q -- -b` $~$ to delete bash history data from **.bash_history** file
-- `cargo run -q -- -z` $~$ to delete zsh history data from **.zhistory** file
-- **reset terminal** $~$ *(work in progress, to automatically reset)*
+- `cargo run -q -- -b` $~$ (deletes bash history data from **.bash_history** file)
+- `cargo run -q -- -z` $~$ (deletes zsh history data from **.zhistory** file)
+- **manually reset terminal** $~$ *(work in progress to reset terminal automatically)*
 
 ```
 shelldel 0.1.0
@@ -32,5 +32,6 @@ OPTIONS:
 
 ## **Work in Progress** :
 - continue to improve user experience
+- reset terminal automatically
 - write a few more tests
 - build for release

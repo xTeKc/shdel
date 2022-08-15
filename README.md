@@ -4,16 +4,16 @@
 Delete data from shell history file(s). <br>
 It currently only deletes data from **bash** and **zsh** terminal history files.
 
-## **Features** : 
+## **Features**
 - checks if the corresponding file exists
 - if the file exists, it deletes the data
 - if the file does not exist, it returns an error message
 
-## **Get Started** : 
+## **Get Started**
 - `clone repo`
 - `cargo build`
 
-## **How to use** :
+## **How to use**
 - `cargo run -q -- -b` $~$ (deletes bash history data from **.bash_history** file)
 - `cargo run -q -- -z` $~$ (deletes zsh history data from **.zhistory** file)
 - **manually reset terminal** $~$ *(work in progress to reset terminal automatically after successful data deletion)*
@@ -32,7 +32,7 @@ OPTIONS:
     -z, --zsh        Delete zsh data
 ```
 
-## **Work in Progress** :
+## **Work in Progress**
 - continue to improve user experience
 - reset terminal automatically after successful data deletion
 - write a few more tests

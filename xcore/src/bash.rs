@@ -16,14 +16,13 @@ pub fn read_path() {
 pub fn write_path() {
     let user: &str = env!("USER");
     let mut _path = format!("/home/{user}/.bash_history");
-    let write_path = fs::write(format!("{_path}"), "");
+    let write_path = fs::write("{_path}", "");
     println!("{:?}", write_path);
 }
 
 pub fn the_user() -> String {
     let user: &str = env!("USER");
-    let owned_user = user.to_owned();
-    owned_user
+    user.to_owned()
 }
 
 pub fn read_file() {
@@ -53,13 +52,11 @@ pub fn write_to_file() {
 }
 
 pub fn clear_term() -> Command {
-    let clear = std::process::Command::new("clear");
-    clear
+    std::process::Command::new("clear")
 }
 
 pub fn reset_term() -> Command {
-    let reset = std::process::Command::new("reset");
-    reset
+    std::process::Command::new("reset")
 }
 
 pub fn bash_main() {

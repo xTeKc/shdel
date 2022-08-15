@@ -1,5 +1,5 @@
-use std::fs;
 use std::env;
+use std::fs;
 use std::path::Path;
 use std::process::Command;
 // use std::time;
@@ -44,9 +44,12 @@ pub fn write_to_file() {
     let check_file_write = Path::new(&_path).exists();
 
     match check_file_write {
-        true => println!("{} {:?} {}", 
-        Green.paint("\nDeleted Data In .zhistory File."), 
-        write_path(), Yellow.paint("\n\nRESET TERMINAL"),),
+        true => println!(
+            "{} {:?} {}",
+            Green.paint("\nDeleted Data In .zhistory File."),
+            write_path(),
+            Yellow.paint("\n\nRESET TERMINAL"),
+        ),
         false => eprintln!("{}", Red.paint("\n.zhistory File Not Found")),
     }
 }
@@ -89,12 +92,8 @@ mod tests {
     }
 
     #[test]
-    fn clear_terminal_test() {
-
-    }
+    fn clear_terminal_test() {}
 
     #[test]
-    fn reset_terminal_test() {
-
-    }
+    fn reset_terminal_test() {}
 }

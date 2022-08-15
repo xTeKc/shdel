@@ -92,8 +92,12 @@ mod tests {
     }
 
     #[test]
-    fn reboot_terminal_test() {
+    fn clear_terminal_test() {
 
     }
 
+    #[test]
+    fn reset_terminal_test() {
+
+    }
 }

@@ -16,7 +16,7 @@ pub fn read_path() {
 pub fn write_path() {
     let user: &str = env!("USER");
     let mut _path = format!("/home/{user}/.zhistory");
-    let write_path = fs::write("{_path}", "");
+    let write_path = fs::write(format!("{_path}"), "");
     println!("{:?}", write_path);
 }
 

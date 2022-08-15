@@ -9,7 +9,7 @@ It currently only deletes data from **bash** and **zsh** terminal history files.
 - `cargo build`
 - `cargo run -q -- -b` $~$ (deletes bash history data from **.bash_history** file)
 - `cargo run -q -- -z` $~$ (deletes zsh history data from **.zhistory** file)
-- **manually reset terminal** $~$ *(work in progress to reset terminal automatically)*
+- **manually reset terminal** $~$ *(work in progress to reset terminal automatically after successful data deletion)*
 
 ```
 shelldel 0.1.0
@@ -32,6 +32,6 @@ OPTIONS:
 
 ## **Work in Progress** :
 - continue to improve user experience
-- reset terminal automatically
+- reset terminal automatically after successful data deletion
 - write a few more tests
 - build for release

@@ -80,10 +80,8 @@ mod tests {
     #[test]
     fn read_history_file() {
         let user: &str = env!("USER");
-        assert_eq!(
-            format!("/home/{user}/.bash_history"),
-            "/home/dev/.bash_history"
-        )
+        assert_eq!(format!("/home/{user}/.bash_history"),
+        "/home/dev/.bash_history")
     }
 
     #[test]

@@ -5,8 +5,8 @@ Delete data from shell history file(s). <br>
 
 | **Supported Shells** |
 |----------------------|
-| - [x] *Bash*         |
-| - [x] *Zsh*          |
+| [x] *Bash*           |
+| [x] *Zsh*            |
 
 ## **Features**
 - checks if the corresponding file exists

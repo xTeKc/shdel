@@ -3,10 +3,9 @@
 # **ShellDel**
 Delete data from shell history file(s). <br> 
 
-| **Supported Shells** |
-|----------------------|
-| [x] *Bash*           |
-| [x] *Zsh*            |
+## **Supported Shells**
+- [ ] Bash
+- [x] Zsh
 
 ## **Features**
 - checks if the corresponding file exists

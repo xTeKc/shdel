@@ -4,7 +4,7 @@
 Delete data from shell history file(s). <br> 
 
 ## **Supported Shells**
-- [ ] Bash
+- [x] Bash
 - [x] Zsh
 
 ## **Features**

@@ -54,11 +54,11 @@ pub fn write_to_file() {
     }
 }
 
-pub fn clear_term() -> Command {
+pub fn zsh_clear_term() -> Command {
     std::process::Command::new("clear")
 }
 
-pub fn reset_term() -> Command {
+pub fn zsh_reset_term() -> Command {
     std::process::Command::new("reset")
 }
 

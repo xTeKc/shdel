@@ -8,3 +8,7 @@ edition = "2021"
 [dependencies]
 xcore = { path = "../xcore" }
 clap = { version = "*", features = ["derive"] }
+
+[[bin]]
+name = "shelldel"
+path = "src/main.rs"

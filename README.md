@@ -5,9 +5,9 @@ Delete data from shell history file(s). <br>
 
 | **Supported Shells** |
 |----------------------|
-|       [x] Bash       |
-|       [x] Zsh        |
-|       [ ] Fish       |
+|    [&check;] Bash    |
+|    [&check;] Zsh     |
+|    [&#9746;] Fish    |
 
 ## **Features**
 - checks if the corresponding file exists

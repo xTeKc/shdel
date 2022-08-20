@@ -60,7 +60,7 @@ pub fn zsh_clear_term() -> Child {
         .args(&["z"])
         .spawn()
         .expect("Failed to execute process");
-        zsh_clear
+    zsh_clear
 }
 
 pub fn zsh_reset_term() -> Child {
@@ -68,7 +68,7 @@ pub fn zsh_reset_term() -> Child {
         .args(&["z"])
         .spawn()
         .expect("Failed to execute process");
-        zsh_reset
+    zsh_reset
 }
 
 pub fn zsh_main() {
@@ -89,8 +89,7 @@ mod tests {
     #[test]
     fn read_history_file() {
         let user: &str = env!("USER");
-        assert_eq!(format!("/home/{user}/.zhistory"), 
-        "/home/dev/.zhistory")
+        assert_eq!(format!("/home/{user}/.zhistory"), "/home/dev/.zhistory")
     }
 
     #[test]

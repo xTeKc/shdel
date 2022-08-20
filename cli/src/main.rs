@@ -1,6 +1,5 @@
 use clap::{App, Arg};
-use xcore::{bash::{bash_main, /*bash_clear_term, bash_reset_term*/},
- zsh::{zsh_main, /*zsh_clear_term, zsh_reset_term*/}};
+use xcore::{bash::bash_main, zsh::zsh_main};
 
 fn main() {
     let matches = App::new("shelldel")

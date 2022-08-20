@@ -60,7 +60,7 @@ pub fn bash_clear_term() -> Child {
         .args(&["b"])
         .spawn()
         .expect("Failed to execute process");
-        bash_clear
+    bash_clear
 }
 
 pub fn bash_reset_term() -> Child {
@@ -68,7 +68,7 @@ pub fn bash_reset_term() -> Child {
         .args(&["b"])
         .spawn()
         .expect("Failed to execute process");
-        bash_reset
+    bash_reset
 }
 
 pub fn bash_main() {
@@ -89,8 +89,10 @@ mod tests {
     #[test]
     fn read_history_file() {
         let user: &str = env!("USER");
-        assert_eq!(format!("/home/{user}/.bash_history"),
-        "/home/dev/.bash_history")
+        assert_eq!(
+            format!("/home/{user}/.bash_history"),
+            "/home/dev/.bash_history"
+        )
     }
 
     #[test]

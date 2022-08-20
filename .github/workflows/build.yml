@@ -42,7 +42,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: '00 01 * * *'
 

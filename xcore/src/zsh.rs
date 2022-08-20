@@ -80,17 +80,17 @@ mod tests {
     use super::*;
     //use std::process::Command;
 
-    #[test]
-    fn check_the_user() {
-        let user: &str = env!("USER");
-        assert_eq!(format!("{user}"), "dev")
-    }
+    // #[test]
+    // fn check_the_user() {
+    //     let user: &str = env!("USER");
+    //     assert_eq!(format!("{user}"), "dev")
+    // }
 
-    #[test]
-    fn read_history_file() {
-        let user: &str = env!("USER");
-        assert_eq!(format!("/home/{user}/.zhistory"), "/home/dev/.zhistory")
-    }
+    // #[test]
+    // fn read_history_file() {
+    //     let user: &str = env!("USER");
+    //     assert_eq!(format!("/home/{user}/.zhistory"), "/home/dev/.zhistory")
+    // }
 
     #[test]
     fn write_to_history_file() {

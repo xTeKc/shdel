@@ -14,13 +14,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Rust
+      - name: Setup Rust
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           toolchain: stable
-          components: rustfmt, clippy
+          components: check, rustfmt, clippy
           override: true
+
+      - name: Run `cargo check`
+        uses: actions-rs/cargo@v1
+        with:
+          command: check
 
       - name: Run `cargo fmt`
         uses: actions-rs/cargo@v1
@@ -31,8 +36,3 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-
-      - name: Run `cargo check`
-        uses: actions-rs/cargo@v1
-        with:
-          command: check

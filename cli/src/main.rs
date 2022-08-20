@@ -1,5 +1,6 @@
 use clap::{App, Arg};
-use xcore::{bash, zsh};
+use xcore::{bash::{bash_main, /*bash_clear_term, bash_reset_term*/},
+ zsh::{zsh_main, /*zsh_clear_term, zsh_reset_term*/}};
 
 fn main() {
     let matches = App::new("shelldel")
@@ -20,12 +21,12 @@ fn main() {
         .get_matches();
 
     match matches.contains_id("bash") {
-        true => bash::bash_main(),
+        true => bash_main(),
         false => (),
     };
 
     match matches.contains_id("zsh") {
-        true => zsh::zsh_main(),
+        true => zsh_main(),
         false => (),
     };
 }

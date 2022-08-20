@@ -1,7 +1,7 @@
 use std::env;
 use std::fs;
 use std::path::Path;
-use std::process::Command;
+use std::process::{Child, Command};
 // use std::time;
 // use std::time::Duration;
 use ansi_term::Colour::{Green, Red, Yellow};
@@ -13,6 +13,7 @@ pub fn read_path() {
     println!("{:?}", read_path);
 }
 
+#[allow(clippy::useless_format)]
 pub fn write_path() {
     let user: &str = env!("USER");
     let mut _path = format!("/home/{user}/.zhistory");
@@ -54,12 +55,20 @@ pub fn write_to_file() {
     }
 }
 
-pub fn zsh_clear_term() -> Command {
-    std::process::Command::new("clear")
+pub fn zsh_clear_term() -> Child {
+    let zsh_clear = Command::new("clear")
+        .args(&["z"])
+        .spawn()
+        .expect("Failed to execute process");
+        zsh_clear
 }
 
-pub fn zsh_reset_term() -> Command {
-    std::process::Command::new("reset")
+pub fn zsh_reset_term() -> Child {
+    let zsh_reset = Command::new("reset")
+        .args(&["z"])
+        .spawn()
+        .expect("Failed to execute process");
+        zsh_reset
 }
 
 pub fn zsh_main() {

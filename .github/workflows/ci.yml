@@ -19,7 +19,7 @@ jobs:
         with:
           profile: minimal
           toolchain: stable
-          components: check, rustfmt, clippy
+          components: rustfmt, clippy
           override: true
 
       - name: Run `cargo check`

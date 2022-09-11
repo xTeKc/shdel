@@ -7,7 +7,7 @@ Delete data from shell history file(s). <br>
 |----------------------|
 |    [&check;] Bash    |
 |    [&check;] Zsh     |
-|    [&#9746;] Fish    |
+|    [&check;] Fish    |
 
 ## **Features**
 - checks if the corresponding file exists

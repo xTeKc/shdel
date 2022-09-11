@@ -20,25 +20,21 @@ Delete data from shell history file(s). <br>
 
 ## **How to use**
 - `cargo run -q -- -b` $~$ (deletes bash history data from **.bash_history** file)
-- `cargo run -q -- -z` $~$ (deletes zsh history data from **.zhistory** file)
-- **manually reset terminal** $~$ *(work in progress to reset terminal automatically after successful data deletion)*
+- `cargo run -q -- -z` $~$ (deletes zsh history data from **zsh_history** or **.zhistory** file)
+- `cargo run -q -- -f` $~$ (deletes fish history data from **.fish_history** file)
 
 ```
-shelldel 0.1.0
-Delete data from shell history file(s)
+shd 0.1.0
+Delete data from shell history file(s).
+Author: xTeKc
 
 USAGE:
-    shelldel [OPTIONS]
+    shd [OPTION]
 
 OPTIONS:
-    -b, --bash       Delete bash data
-    -h, --help       Print help information
-    -V, --version    Print version information
-    -z, --zsh        Delete zsh data
+    -b, --bash                      Delete bash data
+    -z, --zsh                       Delete zsh data
+    -f, --fish                      Delete fish data
+    -h, --help                      Print help information
+    -v, --version                   Print version information
 ```
-
-## **Work in Progress**
-- continue to improve user experience
-- reset terminal automatically after successful data deletion
-- write a few more tests
-- build for release

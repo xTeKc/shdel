@@ -1,5 +1,5 @@
 use clap::{App, Arg};
-use xcore::{bash::bash_main, zsh::zsh_main};
+//use xcore::{bash::bash_main, zsh::zsh_main};
 
 fn main() {
     let matches = App::new("shelldel")
@@ -19,13 +19,13 @@ fn main() {
         )
         .get_matches();
 
-    match matches.contains_id("bash") {
-        true => bash_main(),
-        false => (),
-    };
+    // match matches.contains_id("bash") {
+    //     true => bash_main(),
+    //     false => (),
+    // };
 
-    match matches.contains_id("zsh") {
-        true => zsh_main(),
-        false => (),
-    };
+    // match matches.contains_id("zsh") {
+    //     true => zsh_main(),
+    //     false => (),
+    // };
 }

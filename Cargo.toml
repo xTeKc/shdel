@@ -1,10 +1,13 @@
-[workspace]
-members = [
-    "cli",
-    "xcore",
-]
+[package]
+name = "shelldel"
+version = "0.1.0"
+edition = "2021"
 
-resolver = "2"
+[dependencies]
+ansi_term = "0.12.1"
+clap = { version = "*", features = ["derive"] }
+
+#resolver = "2"
 
 #[profile.release]
 #lto = "thin"

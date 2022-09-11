@@ -1,11 +1,17 @@
 [package]
 name = "shelldel"
 version = "0.1.0"
+description = "Delete data from shell history file(s)."
+authors = ["xTeKc"]
 edition = "2021"
+
+[[bin]]
+name = "shd"
+path = "src/bin/shd.rs"
 
 [dependencies]
 ansi_term = "0.12.1"
-clap = { version = "*", features = ["derive"] }
+pico-args = "0.5.0"
 
 #resolver = "2"
 

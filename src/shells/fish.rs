@@ -2,13 +2,11 @@ use std::env;
 use std::fs;
 use std::path::Path;
 use std::process::{Child, Command};
-// use std::time;
-// use std::time::Duration;
 use ansi_term::Colour::{Green, Red, Yellow};
 
 pub fn read_path() {
     let user: &str = env!("USER");
-    let mut _path = format!("/home/{user}/.zhistory");
+    let mut _path = format!("/home/{user}/.local/share/fish/.fish_history");
     let read_path = fs::read_to_string(_path);
     println!("{:?}", read_path);
 }
@@ -16,7 +14,7 @@ pub fn read_path() {
 #[allow(clippy::useless_format)]
 pub fn write_path() {
     let user: &str = env!("USER");
-    let mut _path = format!("/home/{user}/.zhistory");
+    let mut _path = format!("/home/{user}/.local/share/fish/.fish_history");
     let write_path = fs::write(format!("{_path}"), "");
     println!("{:?}", write_path);
 }
@@ -28,50 +26,50 @@ pub fn the_user() -> String {
 
 pub fn read_file() {
     let whoami = the_user();
-    let full_path = format!("/home/{whoami}/.zhistory");
+    let full_path = format!("/home/{whoami}/.local/share/fish/.fish_history");
 
     let check_file_read = Path::new(&full_path).exists();
 
     match check_file_read {
         true => read_path(),
-        false => eprintln!("{}", Red.paint("\n.zhistory File Not Found")),
+        false => eprintln!("{}", Red.paint("\n.fish_history File Not Found")),
     }
 }
 
 pub fn write_to_file() {
     let user: &str = env!("USER");
-    let mut _path = format!("/home/{user}/.zhistory");
+    let mut _path = format!("/home/{user}/.local/share/fish/.fish_history");
 
     let check_file_write = Path::new(&_path).exists();
 
     match check_file_write {
         true => println!(
             "{} {:?} {}",
-            Green.paint("\nDeleted Data In .zhistory File."),
+            Green.paint("\nDeleted Data In .fish_history File."),
             write_path(),
             Yellow.paint("\n\nRESET TERMINAL"),
         ),
-        false => eprintln!("{}", Red.paint("\n.zhistory File Not Found")),
+        false => eprintln!("{}", Red.paint("\n.fish_history File Not Found")),
     }
 }
 
-pub fn zsh_clear_term() -> Child {
-    let zsh_clear = Command::new("clear")
-        .args(&["z"])
+pub fn fish_clear_term() -> Child {
+    let fish_clear = Command::new("clear")
+        .args(&["b"])
         .spawn()
         .expect("Failed to execute process");
-    zsh_clear
+    fish_clear
 }
 
-pub fn zsh_reset_term() -> Child {
-    let zsh_reset = Command::new("reset")
-        .args(&["z"])
+pub fn fish_reset_term() -> Child {
+    let fish_reset = Command::new("reset")
+        .args(&["b"])
         .spawn()
         .expect("Failed to execute process");
-    zsh_reset
+    fish_reset
 }
 
-pub fn zsh_main() {
+pub fn fish_main() {
     write_to_file();
 }
 
@@ -89,13 +87,16 @@ mod tests {
     // #[test]
     // fn read_history_file() {
     //     let user: &str = env!("USER");
-    //     assert_eq!(format!("/home/{user}/.zhistory"), "/home/dev/.zhistory")
+    //     assert_eq!(
+    //         format!("/home/{user}/.local/share/fish/.fish_history"),
+    //         "/home/dev/.fish_history"
+    //     )
     // }
 
     #[test]
     fn write_to_history_file() {
         let user: &str = env!("USER");
-        let mut _path = format!("/home/{user}/.zhistory");
+        let mut _path = format!("/home/{user}/.local/share/fish/.fish_history");
         _path = String::from("");
         assert_eq!(_path, String::from(""))
     }

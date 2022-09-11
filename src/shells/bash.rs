@@ -2,8 +2,6 @@ use std::env;
 use std::fs;
 use std::path::Path;
 use std::process::{Child, Command};
-// use std::time;
-// use std::time::Duration;
 use ansi_term::Colour::{Green, Red, Yellow};
 
 pub fn read_path() {

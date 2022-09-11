@@ -1,28 +1,31 @@
-use shelldel::shells::bash::bash_main;
-use shelldel::shells::zsh::zsh_main;
-use shelldel::shells::fish::fish_main;
 use pico_args::Arguments;
+use shelldel::shell::bash::bash_main;
+use shelldel::shell::fish::fish_main;
+use shelldel::shell::zsh::zsh_main;
 
 pub fn bash_opt() {
     let mut bash_arg = Arguments::from_env();
 
-    if bash_arg.contains(["-b", "--bash"]) {
-        bash_main()
+    match bash_arg.contains(["-b", "--bash"]) {
+        true => bash_main(),
+        false => (),
     }
 }
 
 pub fn zsh_opt() {
     let mut zsh_arg = Arguments::from_env();
 
-    if zsh_arg.contains(["-z", "--zsh"]) {
-        zsh_main()
+    match zsh_arg.contains(["-z", "--zsh"]) {
+        true => zsh_main(),
+        false => (),
     }
 }
 
 pub fn fish_opt() {
     let mut fish_arg = Arguments::from_env();
 
-    if fish_arg.contains(["-f", "--fish"]) {
-        fish_main()
+    match fish_arg.contains(["-f", "--fish"]) {
+        true => fish_main(),
+        false => (),
     }
 }

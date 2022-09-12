@@ -38,6 +38,19 @@ pub fn parse_args(bin_name: Option<String>) -> Result<Args, pico_args::Error> {
         std::process::exit(0);
     }
 
+    if pargs.contains(["-v", "--version"]) {
+        let version = format!(
+            r#"
+            {GREEN}{name}{RESET} {version}
+        "#,
+            name = bin_name.unwrap_or_else(|| env!("CARGO_PKG_NAME").to_owned()),
+            version = env!("CARGO_PKG_VERSION"),
+        );
+
+        println!("{}", version);
+        std::process::exit(0);
+    }
+
     let args = Args {
         bash: pargs.contains(["-b", "--bash"]),
         zsh: pargs.contains(["-z", "--zsh"]),

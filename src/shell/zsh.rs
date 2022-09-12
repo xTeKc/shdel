@@ -130,7 +130,10 @@ mod tests {
     #[test]
     fn read_first_history_file() {
         let user: &str = env!("USER");
-        assert_eq!(format!("/home/{user}/.zsh_history"), "/home/dev/.zsh_history")
+        assert_eq!(
+            format!("/home/{user}/.zsh_history"),
+            "/home/dev/.zsh_history"
+        )
     }
 
     #[test]

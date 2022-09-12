@@ -4,6 +4,11 @@ use std::fs;
 use std::path::Path;
 //use std::process::{Child, Command};
 
+pub fn the_user() -> String {
+    let user: &str = env!("USER");
+    user.to_owned()
+}
+
 pub fn read_path() {
     let user: &str = env!("USER");
     let mut _path = format!("/home/{user}/.local/share/fish/.fish_history");
@@ -17,11 +22,6 @@ pub fn write_path() {
     let mut _path = format!("/home/{user}/.local/share/fish/.fish_history");
     let write_path = fs::write(format!("{_path}"), "");
     println!("{:?}", write_path);
-}
-
-pub fn the_user() -> String {
-    let user: &str = env!("USER");
-    user.to_owned()
 }
 
 pub fn read_file() {

@@ -1,4 +1,5 @@
 ![workflow](https://github.com/xTeKc/ShellDel/actions/workflows/ci.yml/badge.svg)
+[![support](https://img.shields.io/badge/sponsor-Open%20Collective-blueviolet.svg)](https://opencollective.com/...)
 
 # **ShellDel**
 Delete data from shell history file(s). <br> 

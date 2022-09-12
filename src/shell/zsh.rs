@@ -115,11 +115,7 @@ pub fn write_to_second_file() {
 
 pub fn zsh_main() {
     write_to_first_file();
-    //write_to_second_file();
-
-    //TODO: check which history file exists
-    //if one history file already exists then..
-    //do not write to the non existing file
+    write_to_second_file();
 }
 
 #[cfg(test)]

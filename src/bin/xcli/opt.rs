@@ -1,7 +1,7 @@
 use pico_args::Arguments;
-use shelldel::shell::bash::bash_main;
-use shelldel::shell::fish::fish_main;
-use shelldel::shell::zsh::zsh_main;
+use shdel::shell::bash::bash_main;
+use shdel::shell::fish::fish_main;
+use shdel::shell::zsh::zsh_main;
 
 pub fn bash_opt() {
     let mut bash_arg = Arguments::from_env();

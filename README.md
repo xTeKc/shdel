@@ -1,7 +1,6 @@
-![workflow](https://github.com/xTeKc/ShellDel/actions/workflows/ci.yml/badge.svg)
-[![support](https://img.shields.io/badge/sponsor-Open%20Collective-blueviolet.svg)](https://opencollective.com/...)
+<!-- ![workflow](https://img.shields.io/github/workflow/status/xtekc/shdel/audit/main?label=audits) ![workflow](https://img.shields.io/github/workflow/status/xtekc/shdel/cli-test?label=unit-tests) ![license](https://img.shields.io/github/license/xtekc/shdel) -->
 
-# **ShellDel**
+# **shdel**
 Delete data from shell history file(s). <br> 
 
 | **Supported Shells** |
@@ -15,22 +14,29 @@ Delete data from shell history file(s). <br>
 - if the file exists, it deletes the data
 - if the file does not exist, it returns an error message
 
-## **Get Started**
-- `clone repo`
-- `cargo build`
+**Run with Bash:**
+---
+```
+sh <(curl https://shdel.onrender.com/sh)
+```
+
+**Run with Powershell:**
+---
+```
+iwr -useb https://shdel.onrender.com/ps | iex
+```
 
 ## **How to use**
-- `cargo run -q -- -b` $~$ (deletes bash history data from **.bash_history** file)
-- `cargo run -q -- -z` $~$ (deletes zsh history data from **zsh_history** or **.zhistory** file)
-- `cargo run -q -- -f` $~$ (deletes fish history data from **.fish_history** file)
+- `shdel -b` $~$ (deletes bash history data from **.bash_history** file)
+- `shdel -z` $~$ (deletes zsh history data from **zsh_history** or **.zhistory** file)
+- `shdel -f` $~$ (deletes fish history data from **.fish_history** file)
 
 ```
-shd 0.1.0
+shdel 0.1.0
 Delete data from shell history file(s).
-Author: xTeKc
 
 USAGE:
-    shd [OPTION]
+    shdel [OPTION]
 
 OPTIONS:
     -b, --bash                      Delete bash data

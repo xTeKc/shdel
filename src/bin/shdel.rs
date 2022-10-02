@@ -3,7 +3,7 @@ use xcli::cli::parse_args;
 use xcli::opt::*;
 
 fn main() {
-    let _pargsm = match parse_args(Some("shd".to_owned())) {
+    let _pargsm = match parse_args(Some("shdel".to_owned())) {
         Ok(v) => v,
         Err(e) => {
             eprintln!("Error: {}.", e);

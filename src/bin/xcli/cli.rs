@@ -14,23 +14,22 @@ pub fn parse_args(bin_name: Option<String>) -> Result<Args, pico_args::Error> {
     if pargs.contains(["-h", "--help"]) {
         let help = format!(
             r#"
-            {GREEN}{name}{RESET} {version}
-            {desc}
-            {RED}Author:{RESET} {WHITE}{authors}{RESET}
+{GREEN}{name}{RESET} {version}
+{desc}
 
-            {YELLOW}USAGE:{RESET}
-                {name} [OPTION]
+{YELLOW}USAGE:{RESET}
+    {name} [OPTION]
 
-            {YELLOW}OPTIONS:{RESET}
-                {GREEN}-b{RESET}, {GREEN}--bash{RESET}                      Delete bash data
-                {GREEN}-z{RESET}, {GREEN}--zsh{RESET}                       Delete zsh data
-                {GREEN}-f{RESET}, {GREEN}--fish{RESET}                      Delete fish data
-                {GREEN}-h{RESET}, {GREEN}--help{RESET}                      Print help information
-                {GREEN}-v{RESET}, {GREEN}--version{RESET}                   Print version information
-            "#,
+{YELLOW}OPTIONS:{RESET}
+    {GREEN}-b{RESET}, {GREEN}--bash{RESET}                      Delete bash data
+    {GREEN}-z{RESET}, {GREEN}--zsh{RESET}                       Delete zsh data
+    {GREEN}-f{RESET}, {GREEN}--fish{RESET}                      Delete fish data
+    {GREEN}-h{RESET}, {GREEN}--help{RESET}                      Print help information
+    {GREEN}-v{RESET}, {GREEN}--version{RESET}                   Print version information
+    "#,
             name = bin_name.unwrap_or_else(|| env!("CARGO_PKG_NAME").to_owned()),
             version = env!("CARGO_PKG_VERSION"),
-            authors = env!("CARGO_PKG_AUTHORS"),
+            //authors = env!("CARGO_PKG_AUTHORS"),
             desc = env!("CARGO_PKG_DESCRIPTION"),
         );
 

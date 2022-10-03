@@ -14,7 +14,7 @@ Delete data from shell history file(s). <br>
 - if the file exists, it deletes the data
 - if the file does not exist, it returns an error message
 
-## **Run locally:**
+## **Install**
 x86_64-linux-gnu
 ```
 curl -L https://raw.githubusercontent.com/xTeKc/shdel/main/scripts/local/install-x86_64-linux-gnu.sh | bash

@@ -127,5 +127,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # release_id: "${{ github.event.client_payload.releaseId || inputs.releaseId }}"
-          file: "binaries/*;shdel.sh;shdel.ps1"
+          file: "binaries/*;"
           draft: false

@@ -40,7 +40,7 @@ main() {
             ;;
     esac
 
-    local __TAG_NAME__="v0.1.0"
+    local __TAG_NAME__="v0.1.0-346c7ab6"
     local _url="https://github.com/xTeKc/shdel/releases/download/${__TAG_NAME__}/shdel-${_arch}${_ext}"
     #local _url="https://shdel.onrender.com/download/bin?tag=${__TAG_NAME__}&arch=${_arch}&ext=${_ext}"
 

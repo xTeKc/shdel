@@ -6,7 +6,7 @@ echo Installing shdel...
 MOGEN_DIR=${MOGEN_DIR-"$HOME/.shdel"}
 MOGEN_BIN_DIR="$MOGEN_DIR/bin"
 
-BIN_URL="https://github.com/xTeKc/shdel/releases/download/v0.1.0/shdel-x86_64-unknown-linux-gnu"
+BIN_URL="https://github.com/xTeKc/shdel/releases/download/v0.1.0-346c7ab6/shdel-x86_64-unknown-linux-gnu"
 BIN_PATH="$MOGEN_BIN_DIR/shdel"
 
 # create .shdel bin dir and shdel bin if they don't exist

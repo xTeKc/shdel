@@ -20,11 +20,11 @@ Delete data from shell history file(s). <br>
 sh <(curl https://shdel.onrender.com/sh)
 ```
 
-**Run with Powershell:**
+<!-- **Run with Powershell:**
 ---
 ```
 iwr -useb https://shdel.onrender.com/ps | iex
-```
+``` -->
 
 ## **How to use**
 - `shdel -b` $~$ (deletes bash history data from **.bash_history** file)

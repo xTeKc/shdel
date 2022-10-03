@@ -14,11 +14,21 @@ Delete data from shell history file(s). <br>
 - if the file exists, it deletes the data
 - if the file does not exist, it returns an error message
 
-**Run with Bash:**
+## **Run locally:**
+x86_64-linux-gnu
+```
+curl -L https://raw.githubusercontent.com/xTeKc/shdel/main/scripts/local/install-x86_64-linux-gnu.sh | bash
+```
+x86_64-apple-darwin
+```
+curl -L https://raw.githubusercontent.com/xTeKc/shdel/main/scripts/local/install-x86_64-apple-darwin.sh | bash
+``` 
+
+<!-- **Run with Bash:**
 ---
 ```
 sh <(curl https://shdel.onrender.com/sh)
-```
+``` -->
 
 <!-- **Run with Powershell:**
 ---

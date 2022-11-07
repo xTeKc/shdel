@@ -7,7 +7,7 @@ Delete data from shell history file(s). <br>
 |----------------------|
 |    [&check;] Bash    |
 |    [&check;] Zsh     |
-|    [&check;] Fish    |
+|    [~] Fish    |
 
 ## **Features**
 - checks if the corresponding file exists
@@ -36,10 +36,10 @@ sh <(curl https://shdel.onrender.com/sh)
 iwr -useb https://shdel.onrender.com/ps | iex
 ``` -->
 
-## **How to use**
-- `shdel -b` $~$ (deletes bash history data from **.bash_history** file)
-- `shdel -z` $~$ (deletes zsh history data from **zsh_history** or **.zhistory** file)
-- `shdel -f` $~$ (deletes fish history data from **.fish_history** file)
+## **Usage**
+- `shdel -b` &nbsp; deletes bash history data from **.bash_history** file
+- `shdel -z` &nbsp; deletes zsh history data from **.zsh_history** or **.zhistory** file
+- `shdel -f` &nbsp; deletes fish history data from **.fish_history** file
 
 ```
 shdel 0.1.0

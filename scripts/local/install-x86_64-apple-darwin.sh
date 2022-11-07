@@ -6,7 +6,7 @@ echo Installing shdel...
 SHDEL_DIR=${SHDEL_DIR-"$HOME/.shdel"}
 SHDEL_BIN_DIR="$SHDEL_DIR/bin"
 
-BIN_URL="https://github.com/xTeKc/shdel/releases/download/v0.1.0/shdel-x86_64-apple-darwin"
+BIN_URL="https://github.com/xTeKc/shdel/releases/download/v0.1.0-ee241347/shdel-x86_64-apple-darwin"
 BIN_PATH="$SHDEL_BIN_DIR/shdel"
 
 # create .shdel bin dir and shdel bin if they don't exist

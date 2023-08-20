@@ -89,21 +89,21 @@ jobs:
               TOOLCHAIN: stable, 
               TARGET: x86_64-apple-darwin,
             }
-          - {
-              OS: windows-latest,
-              TOOLCHAIN: stable,
-              TARGET: aarch64-pc-windows-msvc,
-            }
-          - {
-              OS: windows-latest,
-              TOOLCHAIN: stable,
-              TARGET: x86_64-pc-windows-gnu,
-            }
-          - {
-              OS: windows-latest,
-              TOOLCHAIN: stable,
-              TARGET: x86_64-pc-windows-msvc,
-            }
+          # - {
+          #     OS: windows-latest,
+          #     TOOLCHAIN: stable,
+          #     TARGET: aarch64-pc-windows-msvc,
+          #   }
+          # - {
+          #     OS: windows-latest,
+          #     TOOLCHAIN: stable,
+          #     TARGET: x86_64-pc-windows-gnu,
+          #   }
+          # - {
+          #     OS: windows-latest,
+          #     TOOLCHAIN: stable,
+          #     TARGET: x86_64-pc-windows-msvc,
+          #   }
 
     steps:
       - name: Checkout the repository

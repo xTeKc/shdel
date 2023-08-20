@@ -48,10 +48,10 @@ _MacOS_:
 - aarch64-apple-darwin
 - x86_64-apple-darwin
 
-_Windows_:
+<!-- _Windows_:
 - aarch64-pc-windows-msvc
 - x86_64-pc-windows-gnu
-- x86_64-pc-windows-msvc
+- x86_64-pc-windows-msvc -->
 
 ## Installation
 

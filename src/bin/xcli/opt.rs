@@ -1,7 +1,14 @@
+/******************************
+ *  Copyright (c) xTekC.      *
+ *  Licensed under MPL-2.0.   *
+ *  See LICENSE for details.  *
+ *                            *
+ ******************************/
+
 use pico_args::Arguments;
-use shdel::shell::bash::bash_main;
-use shdel::shell::fish::fish_main;
-use shdel::shell::zsh::zsh_main;
+use shdel::xcore::bash::bash_main;
+use shdel::xcore::fish::fish_main;
+use shdel::xcore::zsh::zsh_main;
 
 pub fn bash_opt() {
     let mut bash_arg = Arguments::from_env();

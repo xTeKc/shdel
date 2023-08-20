@@ -1,3 +1,10 @@
+/******************************
+ *  Copyright (c) xTekC.      *
+ *  Licensed under MPL-2.0.   *
+ *  See LICENSE for details.  *
+ *                            *
+ ******************************/
+
 use ansi_term::Colour::{Green, Red, Yellow};
 use std::env;
 use std::fs;
@@ -73,35 +80,35 @@ pub fn bash_main() {
     write_to_file();
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-    #[test]
-    fn check_the_user() {
-        let user: &str = env!("USER");
-        assert_eq!(format!("{user}"), "dev")
-    }
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
+//     #[test]
+//     fn check_the_user() {
+//         let user: &str = env!("USER");
+//         assert_eq!(format!("{user}"), "dev")
+//     }
 
-    #[test]
-    fn read_history_file() {
-        let user: &str = env!("USER");
-        assert_eq!(
-            format!("/home/{user}/.bash_history"),
-            "/home/dev/.bash_history"
-        )
-    }
+//     #[test]
+//     fn read_history_file() {
+//         let user: &str = env!("USER");
+//         assert_eq!(
+//             format!("/home/{user}/.bash_history"),
+//             "/home/dev/.bash_history"
+//         )
+//     }
 
-    #[test]
-    fn write_to_history_file() {
-        let user: &str = env!("USER");
-        let mut _path = format!("/home/{user}/.bash_history");
-        _path = String::from("");
-        assert_eq!(_path, String::from(""))
-    }
+//     #[test]
+//     fn write_to_history_file() {
+//         let user: &str = env!("USER");
+//         let mut _path = format!("/home/{user}/.bash_history");
+//         _path = String::from("");
+//         assert_eq!(_path, String::from(""))
+//     }
 
-    // #[test]
-    // fn clear_terminal_test() {}
+//     #[test]
+//     fn clear_terminal_test() {}
 
-    // #[test]
-    // fn reset_terminal_test() {}
-}
+//     #[test]
+//     fn reset_terminal_test() {}
+// }

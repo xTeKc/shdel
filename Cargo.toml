@@ -1,14 +1,48 @@
 [package]
 name = "shdel"
-version = "0.1.0"
+version = "0.0.0"
 description = "Delete data from shell history file(s)."
-authors = ["xTeKc"]
+authors = ["xTekC"]
+repository = "https://github.com/xTekC/shdel"
+readme = "README.md"
+homepage = "https://github.com/xTekC/shdel"
+documentation = "https://github.com/xTekC/shdel/blob/main/README.md"
+categories = ["command-line-utilities", "development-tools"]
+keywords = ["cli", "async"]
+# default-run = "shdel -h"
+publish = false
+# include = "[...]"
+# exclude = "[...]"
+# workspace = "..."
+# links = "..."
+# build = "build.rs"
+rust-version = "1.69.0"
 edition = "2021"
+license = "MPL-2.0"
 
 [[bin]]
 name = "shdel"
-path = "src/bin/shdel.rs"
+path = "src/bin/main.rs"
 
 [dependencies]
 ansi_term = "0.12.1"
 pico-args = "0.5.0"
+tokio = { version = "1.28.1", features = ["rt-multi-thread", "macros"] }
+
+# [dependencies.cursive]
+# version = "0.20.0"
+# default-features = false
+# features = ["crossterm-backend"]
+
+# [dev-dependencies]
+
+
+# [build-dependencies]
+
+
+[profile.rel-opt]
+inherits = "release"
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true

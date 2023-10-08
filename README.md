@@ -1,7 +1,7 @@
 <div align="center">
 
 # shdel
-Delete data from shell history file(s).
+Delete data from shell history files.
 
 <!-- <a href="https://crates.io/crates/shdel/"><img src="https://img.shields.io/crates/v/shdel?style=flat&amp;labelColor=032a1a&amp;color=065535&amp;logo=Rust&amp;logoColor=white" alt="Crate Release"></a> -->
 <br>
@@ -10,48 +10,25 @@ Delete data from shell history file(s).
 <!-- <a href="https://docs.rs/shdel/"><img src="https://img.shields.io/docsrs/shdel?style=flat&amp;labelColor=032a1a&amp;color=065535&amp;logo=Rust&amp;logoColor=white" alt="Documentation"></a> -->
 
 [![GitHub license](https://img.shields.io/github/license/xTekC/shdel.svg?style=flat&labelColor=032a1a&color=065535&logo=GitHub&logoColor=black&label=License)](https://github.com/xTekC/shdel/blob/main/LICENSE)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A-Coffee-orange?style=flat&labelColor=FFFFFF&color=000000&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/xTekC)
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-purple?style=flat&labelColor=grey&color=8a63d2&logo=github&logoColor=white)](https://github.com/sponsors/xTekC)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A-Coffee-orange?style=flat&labelColor=grey&color=ff813f&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/xTekC)
+[![Ko-fi](https://img.shields.io/badge/Support-Ko--fi-red?style=flat&labelColor=grey&color=f16061&logo=ko-fi&logoColor=white)](https://ko-fi.com/xTekC)
 
 <a href="#features">Features</a> •
 <a href="#installation">Installation</a> •
 <a href="#usage">Usage</a> •
-<a href="#contribution">Contribution</a>
-<!-- <a href="#roadmap">Roadmap</a> -->
-<!-- <a href="#acknowledgements">Acknowlegements</a> • -->
+<a href="#contribution">Contribution</a> •
+<a href="#donate">Donate</a>
 
 </div>
 
 ## Features
-- Checks if the corresponding file exists and deletes the history data from that file.
-
-| **Supported Shells** |
+|  |
 |----------------------|
 |    [&check;] Bash    |
 |    [&check;] Zsh     |
 |    [~] Fish    |
-
-**Supported systems**
-
-_Linux_:
-- riscv64gc-unknown-linux-gnu
-- aarch64-linux-android
-- aarch64-unknown-linux-gnu
-- aarch64-unknown-linux-musl
-- x86_64-unknown-linux-gnu
-- x86_64-unknown-linux-musl
-
-_BSD_:
-- x86_64-unknown-freebsd
-- x86_64-unknown-netbsd
-
-_MacOS_:
-- aarch64-apple-darwin
-- x86_64-apple-darwin
-
-<!-- _Windows_:
-- aarch64-pc-windows-msvc
-- x86_64-pc-windows-gnu
-- x86_64-pc-windows-msvc -->
 
 ## Installation
 
@@ -61,7 +38,7 @@ _MacOS_:
 cargo install --git https://github.com/xTekC/shdel --branch main --locked --profile rel-opt
 ```
 
-<!-- **Prebuilt Binary**
+**Prebuilt Binary**
 <br>
 
 (For Android, use Termux: `https://f-droid.org/repo/com.termux_118.apk`)
@@ -76,38 +53,7 @@ Unix-Like [Remove](https://github.com/xTeKc/shdel/blob/main/scripts/remove.sh)
 
 ```
 curl -sSL https://raw.githubusercontent.com/xTeKc/shdel/main/scripts/remove.sh | sh
-``` -->
-
-<!-- - Download the release binary and the corresponding hash file from the [Releases](https://github.com/xTekC/shdel/releases) page.
-
-- _Unix-Like Systems:_
-   - Verify the integrity of the binary by checking its hash: 
-   ```
-   sha512sum -c shdel-v0.0.0-ARCH.tar.gz.sha512
-   ```
-   - Extract the binary to ~/ and create a symlink in /usr/local/bin/ for system-wide access: 
-   ```
-   tar -xzvf shdel-v0.0.0-ARCH.tar.gz -C ~/ && sudo ln -s ~/shdel/bin/shdel /usr/local/bin/shdel
-   ```
-
-**Android**
-
-- Download Termux:
 ```
-https://f-droid.org/repo/com.termux_118.apk
-```
-
-- Within Termux:
-
-   [Install](https://github.com/xTeKc/shdel/blob/main/scripts/android_i.sh):
-   ```
-   curl -sSL https://raw.githubusercontent.com/xTeKc/shdel/main/scripts/android_i.sh | bash
-   ```
-
-   [Remove](https://github.com/xTeKc/shdel/blob/main/scripts/android_rm.sh):
-   ```
-   curl -sSL https://raw.githubusercontent.com/xTeKc/shdel/main/scripts/android_rm.sh | bash
-   ``` -->
 
 ## Usage
 
@@ -122,11 +68,15 @@ shdel -h
 ## Contribution
 Read the [Contributing Guide](CONTRIBUTING.md) before making a pull request.
 
-<!-- ## Roadmap
-A list of planned future developments for the project. -->
+## Donate
+If you find shdel valuable and wish to support its progress, here are the various avenues through which you can extend your support:
 
-<!-- ## Acknowledgements
-List of any external libraries, frameworks, or other resources used in the project. -->
+- [GitHub Sponsors](https://github.com/sponsors/xTekC)
+- [Buy Me A Coffee](https://www.buymeacoffee.com/xTekC)
+- [Ko-fi](https://ko-fi.com/xTekC)
+
+Your generous donations are invaluable and help fuel the ongoing development of shdel. <br>
+Thank you!
 
 <br>
 
